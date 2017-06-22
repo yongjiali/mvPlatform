@@ -1,0 +1,2593 @@
+<html>
+	<head>
+		<title>qq音乐</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/qqMusic.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/animation.css"/>-->
+		<script src="js/qqMusic.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+		<style type="text/css">
+			#new_music_pic2{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<!--头部-->
+			<div class="header">
+				<div class="qqMusic_title">
+					<img src="img/qqMusic/logo.png" />
+				</div>
+				<div class="top_nav">
+					
+					<ul class="top_nav_ul">
+						<li class="top_nav_item active">
+							<a class="top_nav_link">音乐馆</a>
+						</li>
+						
+						<li class="top_nav_item">
+							<a class="top_nav_link">我的音乐</a>
+						</li>
+						
+						<li class="top_nav_item">
+							<a class="top_nav_link">下载客户端</a>
+						</li>
+						
+						<li class="top_nav_item">
+							<a class="top_nav_link">VIP</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!--搜索框-->
+				<div class="top_search">
+					<div class="top_search_input">
+						<input class="search_input" id="searchbox" type="text" placeholder="梦想的声音">
+						<button class="search_input_btn">
+							<div class="icon_search"></div>
+							<!--<span class="icon_txt">搜索</span>-->
+						</button>
+					</div>
+					
+					<!--隐藏的-->
+					<div class="js_smartbox">
+						<div class="mod_search_other" id="searchhistory">
+				            <div class="search_hot">
+				                <dl class="search_hot_list">
+				                    <!--<dt class="search_hot_tit">热门搜索</dt>-->
+				                    <dd>
+										
+				                        <a class="search_hot_link">
+				                            <span class="search_hot_number">1</span>
+				                            <span class="search_hot_name">手机铃声</span>
+				                            <span class="search_hot_listen">28万</span>
+				                        </a>
+										
+				                        <a class="search_hot_link">
+				                            <span class="search_hot_number">1</span>
+				                            <span class="search_hot_name">手机铃声</span>
+				                            <span class="search_hot_listen">28万</span>
+				                        </a>
+				                        <a class="search_hot_link">
+				                            <span class="search_hot_number">1</span>
+				                            <span class="search_hot_name">手机铃声</span>
+				                            <span class="search_hot_listen">28万</span>
+				                        </a>
+				                           
+				                        <a class="search_hot_link">
+				                        
+				                        <a class="search_hot_link js_smartbox_search js_left">
+				                            <span class="search_hot_number">1</span>
+				                            <span class="search_hot_name">手机铃声</span>
+				                            <span class="search_hot_listen">28万</span>
+				                        </a>
+				                            
+				                    </dd>
+				                
+				            	</dl>
+				            </div>
+				
+				            <div class="search_history">
+				                <dl class="search_history_list">
+				                    <dt class="search_history_tit">
+				                    	搜索历史
+				                    	<a href="javascript:;" class="search_history__clear js_smartbox_delete_all">
+				                    		<div class="icon_history_clear"></div>
+				                    		
+				                    	</a>
+				                    </dt>
+						
+				                </dl>
+				            </div>
+						</div>
+					</div>
+					
+				</div>
+				<!--登录-->
+				<div class="top_opt">
+					<div class="login">登录</div>
+					<div class=" greenbrick">开通绿钻豪华版</div>
+					<div class="pay">开通付费包</div>
+				</div>
+			</div>
+			
+			<div class="clearfloat"></div>
+			<!--导航栏-->
+			<div class="logo">
+				<ul class="logo_ul">
+					<li class="logo_li active2">
+						<a>首页</a>
+					</li>
+					<li class="logo_li">
+						<a>歌手</a>
+					</li>
+					<li class="logo_li">
+						<a>专辑</a>
+					</li>
+					<li class="logo_li">
+						<a>排行榜</a>
+					</li>
+					<li class="logo_li">
+						<a>歌单广场</a>
+					</li>
+					<li class="logo_li">
+						<a>MV</a>
+					</li>
+					<div class="clearfloat"></div>
+				</ul>
+			</div>
+			
+			<!--中间部分-->
+			<div class="content">
+				<!--新歌首发-->
+				<div class="new_song_box">
+					<div class="mod_index mod_index--new">
+        				<div class="section_inner">
+							<!--上面的字-->
+	            			<div class="index_hd">
+	                			<h2 class="index_tit">
+	                				<!--新歌首发-->
+	                			</h2>
+			                	<i class="index_line index_line--left"></i>
+			                	<i class="index_line index_line--right"></i>
+	            			</div>
+	            			
+	            			<!--导航栏-->
+							<div class="music_type">
+								<ul id="music_type">
+									<li class="music_type_li" id="li1">
+										<a>全部</a>
+									</li>
+									<li class="music_type_li" id="li2">
+										<a>华语</a>
+									</li>
+									<li class="music_type_li" id="li3">
+										<a>欧美</a>
+									</li>
+									<li class="music_type_li" id="li4">
+										<a>韩国</a>
+									</li>
+									<li class="music_type_li">
+										<a>日本</a>
+									</li>
+									<li class="music_type_li">
+										<a>全部></a>
+									</li>
+									<div class="clearfloat"></div>
+								</ul>
+							</div>
+							
+							<!--中间的图片-->
+							<div class="mod_playlist mod_slide" id="new_music_pic1">
+     
+                				<ul class="playlist_list slide_list" id="musiclist">
+			   
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/1.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/2.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/3.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/4.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004bn8bn3QdXMO.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004EKT5z1r9bUU.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004eWSp62P3Cmp.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004X28Mu1AwzKS.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M0000008yHHd1KTTQD.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000004eWSp62P3Cmp (1).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000004EKT5z1r9bUU.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000033rpsp1k8xJ0.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000000I7tCZ1rBPdg (1).jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000037vYtz49nUOp.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000037XLZB0R9UJI.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000003ukg8Z2zs3fe.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                    				
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/1.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/2.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/3.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/4.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<div class="clearfloat"></div>
+                				</ul>
+			   					
+    						</div>
+    						
+    						
+    						
+    						<!--第二组-->
+    						<div class="mod_playlist mod_slide" id="new_music_pic2">
+     
+                				<ul class="playlist_list slide_list" id="musiclist2">
+			   
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/300 (1).jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/300 (10).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/300 (11).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/300 (12).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004bn8bn3QdXMO.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004EKT5z1r9bUU.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004eWSp62P3Cmp.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M000004X28Mu1AwzKS.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform.html">
+	                           						<img src="img/qqMusic/T002R300x300M0000008yHHd1KTTQD.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000004eWSp62P3Cmp (1).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000004EKT5z1r9bUU.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000033rpsp1k8xJ0.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000000I7tCZ1rBPdg (1).jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000037vYtz49nUOp.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M0000037XLZB0R9UJI.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/T002R300x300M000003ukg8Z2zs3fe.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                    				
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/1.jpg" class="playlist_pic" />
+	                           						<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="new_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>完美的你</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					吴莫愁
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/2.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>水晶记</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					郭顶
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/3.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>亲爱的怎么了</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					谭真
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/4.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="mod_bottom new_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>有你的快递</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					赵英俊
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<div class="clearfloat"></div>
+                				</ul>
+			   					
+    						</div>
+							
+							<!--下边的线-->
+							<div class="mod_slide_switch">
+    							<a class="slide_switch_item">
+    								<div class="active3" id="js_line1"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg" id="js_line2"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg" id="js_line3"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg" id="js_line4"></div>
+    							</a>
+    						</div>
+							
+						</div>
+						
+						<!--<div class="mod_slide_action">-->
+				            <div class="slide_action slide_action--left">
+				                <a class="slide_action_btn slide_action_btn--left js_jump" id="before_bnt">
+				                	
+				                	<i class="slide_action_arrow slide_action_arrow--left"></i>
+				                </a>
+				            </div>
+				            <div class="slide_action slide_action--right">
+				                <a class="slide_action_btn slide_action_btn--right js_jump" id="next_bnt">
+				                	
+				                	<i class="slide_action_arrow slide_action_arrow--right"></i>
+				                </a>
+				            </div>
+        				<!--</div>-->
+						
+						
+					</div>
+        		</div>
+				
+				<!--精彩推荐-->
+				<div class="re_music_box">
+					<div class="mod_index mod_index--event">
+        				<div class="section_inner">
+							<!--上面的字-->
+	            			<div class="index_hd">
+	                			<h2 class="index_tit">
+	                				
+	                			</h2>
+			                	<i class="index_line index_line--left"></i>
+			                	<i class="index_line index_line--right"></i>
+	            			</div>
+							
+							<!--中间的图片-->
+							<div class="mod_event mod_slide mod_focus--animate">
+				                <ul class="event_list slide_list" id="event_list">
+						
+				                    <li class="event_list_item slide_item">
+				                        <a href="musicPlatform.html" class="event_list_link">
+				                            <img src="img/qqMusic/52785.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+						
+				                    <li class="event_list_item slide_item active4">
+				                        <a href="musicPlatform.html" class="event_list_link">
+				                            <img src="img/qqMusic/53361.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                        
+						
+				                    <li class="event_list_item slide_item">
+				                        <a href="musicPlatform.html" class="event_list_link">
+				                            <img src="img/qqMusic/53659.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                        
+				                    <li class="event_list_item slide_item">
+				                        <a href="musicPlatform.html" class="event_list_link">
+				                            <img src="img/qqMusic/53685.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+						
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/53712.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+						
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/54710.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+						
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/55009.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/54498.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                    
+				                    
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/52785.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+						
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/53361.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                        
+						
+				                    <li class="event_list_item slide_item">
+				                        <a class="event_list_link">
+				                            <img src="img/qqMusic/53659.jpg" class="event_list_pic">
+				                        </a>
+				                    </li>
+				                    <div class="clearfloat"></div>
+						
+				               </ul>
+				            </div>
+							<!--下面的线-->
+							<div class="mod_slide_switch">
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg"></div>
+    							</a>
+    						</div>
+						</div>
+						
+						<div class="slide_action slide_action--left">
+				            <a class="slide_action_btn slide_action_btn--left js_jump" id="before_bnt">
+				               	
+				               	<i class="slide_action_arrow slide_action_arrow--left"></i>
+				            </a>
+				        </div>
+				        <div class="slide_action slide_action--right">
+				            <a class="slide_action_btn slide_action_btn--right js_jump" id="next_bnt">
+				           		
+				          		<i class="slide_action_arrow slide_action_arrow--right"></i>
+				            </a>
+				        </div>
+        			
+					</div>
+				</div>
+				
+				<!--排行榜-->
+				<div class="toplist_box">
+					<div class="mod_index mod_index--top">
+        				<div class="section_inner">
+							<!--上面的字-->
+	            			<div class="index_hd">
+	                			<h2 class="index_tit">
+	                				
+	                			</h2>
+			                	<i class="index_line index_line--left"></i>
+			                	<i class="index_line index_line--right"></i>
+	            			</div>
+							<div class="mod_toplist mod_slide">
+								<ul class="toplist_list slide_list">
+									<li class="toplist_item toplist_item_pop mod_cover">
+										<div class="toplist_bg">
+						
+										</div>
+										<i class="mod_cover_mask"></i>
+	                           			<i class="mod_cover_icon_play js_play"></i>
+			
+										<i class="toplist_line"></i>
+										<h3 class="toplist_hd">
+											<a>
+												<div class="toplist_tit_top"></div>
+												<div class="toplist_tit_pop">流行指数</div>
+											</a>
+										</h3>
+										
+										<ul class="toplist_songlist">
+											<li class="toplist_song">
+												<div class="toplist_number">1</div>
+												<div class="toplist_songname">
+		                                    		<a>我怀念的 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>林俊杰</a>
+		                                		</div>
+											</li>
+											
+											<li class="toplist_song">
+		                                		<div class="toplist_number">2</div>
+		                                		<div class="toplist_songname">
+		                                    		<a>我的滑板鞋2016</a>
+		                               	 		</div>
+		                                		<div class="toplist_artist">
+		                                   	 		<a>华晨宇</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">3</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>黑色柳丁 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>田馥甄</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">4</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>我在人民广场吃炸鸡 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>萧敬腾</a>
+		                                		</div>
+		                            		</li>
+										</ul>
+									</li>
+									<li class="toplist_item toplist_item_new mod_cover">
+										<div class="toplist_bg"></div>
+										<i class="mod_cover_mask"></i>
+	                           			<i class="mod_cover_icon_play js_play"></i>
+			
+										<i class="toplist_line"></i>
+										<h3 class="toplist_hd">
+											<a>
+												<div class="toplist_tit_top"></div>
+												<div class="toplist_tit_pop">流行指数</div>
+											</a>
+										</h3>
+										
+										<ul class="toplist_songlist">
+											<li class="toplist_song">
+												<div class="toplist_number">1</div>
+												<div class="toplist_songname">
+		                                    		<a>我怀念的 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>林俊杰</a>
+		                                		</div>
+											</li>
+											
+											<li class="toplist_song">
+		                                		<div class="toplist_number">2</div>
+		                                		<div class="toplist_songname">
+		                                    		<a>我的滑板鞋2016</a>
+		                               	 		</div>
+		                                		<div class="toplist_artist">
+		                                   	 		<a>华晨宇</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">3</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>黑色柳丁 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>田馥甄</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">4</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>我在人民广场吃炸鸡 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>萧敬腾</a>
+		                                		</div>
+		                            		</li>
+		                            	</ul>
+									</li>
+									<li class="toplist_item toplist_item_hot mod_cover">
+										<div class="toplist_bg">
+						
+										</div>
+										<i class="mod_cover_mask"></i>
+	                           			<i class="mod_cover_icon_play js_play"></i>
+			
+										<i class="toplist_line"></i>
+										<h3 class="toplist_hd">
+											<a>
+												<div class="toplist_tit_top"></div>
+												<div class="toplist_tit_pop">流行指数</div>
+											</a>
+										</h3>
+										
+										<ul class="toplist_songlist">
+											<li class="toplist_song">
+												<div class="toplist_number">1</div>
+												<div class="toplist_songname">
+		                                    		<a>我怀念的 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>林俊杰</a>
+		                                		</div>
+											</li>
+											
+											<li class="toplist_song">
+		                                		<div class="toplist_number">2</div>
+		                                		<div class="toplist_songname">
+		                                    		<a>我的滑板鞋2016</a>
+		                               	 		</div>
+		                                		<div class="toplist_artist">
+		                                   	 		<a>华晨宇</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">3</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>黑色柳丁 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>田馥甄</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">4</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>我在人民广场吃炸鸡 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>萧敬腾</a>
+		                                		</div>
+		                            		</li>
+										</ul>
+										
+									</li>
+									<li class="toplist_item toplist_item_high mod_cover">
+										<div class="toplist_bg">
+						
+										</div>
+										<i class="mod_cover_mask"></i>
+	                           			<i class="mod_cover_icon_play js_play"></i>
+			
+										<i class="toplist_line"></i>
+										<h3 class="toplist_hd">
+											<a>
+												<div class="toplist_tit_top"></div>
+												<div class="toplist_tit_pop">流行指数</div>
+											</a>
+										</h3>
+										
+										<ul class="toplist_songlist">
+											<li class="toplist_song">
+												<div class="toplist_number">1</div>
+												<div class="toplist_songname">
+		                                    		<a>我怀念的 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>林俊杰</a>
+		                                		</div>
+											</li>
+											
+											<li class="toplist_song">
+		                                		<div class="toplist_number">2</div>
+		                                		<div class="toplist_songname">
+		                                    		<a>我的滑板鞋2016</a>
+		                               	 		</div>
+		                                		<div class="toplist_artist">
+		                                   	 		<a>华晨宇</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">3</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>黑色柳丁 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>田馥甄</a>
+		                                		</div>
+		                            		</li>
+		                            		
+		                            		<li class="toplist_song">
+		                                		<div class="toplist_number">4</div>
+		                                		<div class="toplist_songname">
+		                                   	 		<a>我在人民广场吃炸鸡 (Live)</a>
+		                                		</div>
+		                                		<div class="toplist_artist">
+		                                    		<a>萧敬腾</a>
+		                                		</div>
+		                            		</li>
+										</ul>
+										
+									</li>
+									
+								</ul>
+							</div>
+				
+				
+        				</div>
+        			</div>
+        		</div>
+				
+				<!--热门歌单-->
+				<div class="hot_song_box">
+					<div class="mod_index mod_index--hot">
+        				<div class="section_inner">
+        					<!--上面的字-->
+	            			<div class="index_hd">
+	                			<h2 class="index_tit">
+	                				<!--热门歌单-->
+	                			</h2>
+			                	<i class="index_line index_line--left"></i>
+			                	<i class="index_line index_line--right"></i>
+	            			</div>
+            				<!--中间的图片-->
+            				
+            				<div class="mod_playlist mod_slide">
+     
+                				<ul class="playlist_list slide_list" id="new_mclist">
+			   
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a href="musicPlatform/musicPlatform.html">
+	                           						<img src="img/qqMusic/300.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (1).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (2).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (3).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                    				
+                    				
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/1.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/2.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/3.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (1).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                    				
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (10).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (11).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (12).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (2).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                    				
+                    				<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300.jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+			   						<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (1).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (2).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<li class="playlist_item  slide_item playlist_item_more">
+                        				<div class="playlist_item_box">
+	                            			<div class="playlist_cover mod_cover">
+	                            				<a>
+	                           						<img src="img/qqMusic/300 (3).jpg" class="playlist_pic" />
+	                            					<i class="mod_cover_mask"></i>
+	                           						<i class="mod_cover_icon_play js_play"></i>
+	                            				</a>
+	                            			</div>
+	                            			
+	                            			<div class="playlist_bottom mod_bottom">
+	                            				<div class="playlist_title">
+		                            				<span class="playlist_title_txt">
+		                            					<a>韩语：歌曲里演绎的爱情故事</a>
+		                            				</span>
+		                            				
+		                            				<div class="playlist_other">
+	                                					播放量：62.6万
+	                            					</div>
+		                           	 				<!--<a><span class="icon_txt">更多</span></a>-->
+				    							</div>
+	                            
+	                          
+	                            			</div>
+	                            			
+                        				</div>
+                    				</li>
+                					<div class="clearfloat"></div>
+                				</ul>
+			   					
+    						</div>
+    						
+    						<div class="mod_slide_switch">
+    							<a class="slide_switch_item">
+    								<div class="active3" id="js_line5"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg" id="js_line6"></div>
+    							</a>
+    							<a class="slide_switch_item">
+    								<div class="slide_switch_bg" id="js_line7"></div>
+    							</a>
+    						</div>
+    	
+        				</div>
+        				
+        				<div class="slide_action slide_action--left">
+				            <a class="slide_action_btn slide_action_btn--left js_jump" id="before_bnt2">
+				              	
+				               	<i class="slide_action_arrow slide_action_arrow--left"></i>
+				            </a>
+				        </div>
+				        <div class="slide_action slide_action--right">
+				            <a class="slide_action_btn slide_action_btn--right js_jump" id="next_bnt2">
+				               	
+				               	<i class="slide_action_arrow slide_action_arrow--right"></i>
+				            </a>
+				        </div>
+    				</div>
+				</div>
+			
+				<!--MV首播-->
+				<div class="MV">
+					<div class="mod_index mod_index--mv">
+        				<div class="section_inner">
+        					<!--上面的字-->
+	            			<div class="index_hd">
+	                			<h2 class="index_tit">
+	                				<!--新歌首发-->
+	                			</h2>
+			                	<i class="index_line index_line--left"></i>
+			                	<i class="index_line index_line--right"></i>
+	            			</div>
+        					
+        					<div class="music_type">
+								<ul>
+									<li class="music_type_li">
+										<a>全部</a>
+									</li>
+									<li class="music_type_li">
+										<a>华语</a>
+									</li>
+									<li class="music_type_li">
+										<a>欧美</a>
+									</li>
+									<li class="music_type_li">
+										<a>韩国</a>
+									</li>
+									<li class="music_type_li">
+										<a>日本</a>
+									</li>
+									<li class="music_type_li">
+										<a>全部></a>
+									</li>
+									<div class="clearfloat"></div>
+								</ul>
+							</div>
+							
+							<div class="mod_mv">
+                				<ul class="mv_list_list">
+		
+		    
+		                            <li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0.jpg" style="display: block; visibility: visible;">
+		                                        <!--<i class="mod_cover_mask"></i><i class="mod_cover__icon_play"></i>-->
+		                                    	<i class="mod_cover_mask"></i>
+	                           					<i class="mod_cover_icon_play js_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+				
+				    
+		                            <li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (2).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                              
+		                           	<li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (1).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                           
+		                            <li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (4).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                        
+		                           	<li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (5).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                                
+				
+				    
+		                            <li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (6).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                                
+				
+				    
+		                           	<li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (7).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                               
+				    
+		                            <li class="mv_list_item">
+		                                <div class="mv_list_item_box mod_cover" style="visibility: visible;">
+		                                    <a class="mv_list_cover">
+		                                        <img class="mv_list_pic" src="img/qqMusic/0 (8).jpg" style="display: block; visibility: visible;">
+		                                        <i class="mod_cover_mask"></i><i class="mod_cover_icon_play"></i>
+		                                    </a>
+		                                    <h3 class="mv_list_title"><a >西门少年</a></h3>
+		                                    <p class="mv_list_singer">
+						    					<a title="李宇春">李宇春</a>
+						    					<!--div class="mv_list__info">2016-11-22</div-->
+						    				</p>
+						    				<div class="mv_list_info">
+						    					<span class="mv_list_listen">
+						    						<i class="mv_list_listen_icon sprite"></i>5.6万
+						    					</span>
+						    				</div>
+						    				
+		                                </div>
+		                            </li>
+		                           
+								</ul>
+            				</div>
+											
+        				</div>
+        			</div>
+        		</div>
+				
+			</div>
+			
+			
+			<div class="footer">
+			    <div class="section_inner">
+			        <div class="footer_info">
+			
+			            <div class="footer_download">
+			                <h3 class="footer_tit">下载QQ音乐客户端</h3>
+			                <ul class="footer_download_list">
+			                    <li class="footer_download_list_item">
+			                    	<a>
+			                    		<i class="icon_qm_pc">
+			                    			<span class="icon_txt">
+			                    				QQ音乐
+			                    			</span>
+			                    		</i>
+			                    		PC版
+			                    	</a>
+			                    </li>
+			                    <li class="footer_download_list_item">
+			                    	<a>
+			                    		<i class="icon_qm_mac">
+			                    			<span class="icon_txt">
+			                    				QQ音乐
+			                    			</span>
+			                    		</i>
+			                    		PC版
+			                    	</a>
+			                    </li>
+			                    <li class="footer_download_list_item">
+			                    	<a>
+			                    		<i class="icon_qm_android">
+			                    			<span class="icon_txt">
+			                    				QQ音乐
+			                    			</span>
+			                    		</i>
+			                    		PC版
+			                    	</a>
+			                    </li>
+			                    <li class="footer_download_list_item">
+			                    	<a>
+			                    		<i class="icon_qm_iphone">
+			                    			<span class="icon_txt">
+			                    				QQ音乐
+			                    			</span>
+			                    		</i>
+			                    		PC版
+			                    	</a>
+			                    </li>
+			                </ul>
+			            </div>
+			
+			            <div class="footer_product">
+			                <h3 class="footer_tit">特色产品</h3>
+			                <ul class="footer_product_list">
+			                    <li class="footer_product_list_item footer_product_list_item--pic">
+			                    	<a>
+			                    		<i class="icon_qm_kg"></i>
+			                    		全民K歌
+			                    	</a>
+			                    </li>
+			                    <li class="footer_product_list_item footer_product_list_item--pic">
+			                    	<a>
+			                    		<i class="icon_qm_ss"></i>
+			                    		Super Sound
+			                    	</a>
+			                    </li>
+			                    <li class="footer_product_list_item footer_product_list_item--pic"><a><i class="icon_qm_qp"></i>QPlay</a></li>
+			                    <li class="footer_product_list_item"><a>QQ音乐原创音乐平台</a></li>
+			                    <li class="footer_product_list_item"><a>车载互联</a></li>
+			                    <li class="footer_product_list_item"><a>QQ演出</a></li>
+			                </ul>
+			            </div>
+			
+			            <div class="footer_link">
+			                <h3 class="footer_tit">合作链接</h3>
+			            
+			                <ul class="footer_link_list">
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		CJ E&amp;M
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		腾讯视频
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                	<li class="footer_link_list_item">
+			                    	<a>
+			                    		CJ E&amp;M
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		腾讯视频
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                   
+			                	<li class="footer_link_list_item">
+			                    	<a>
+			                    		CJ E&amp;M
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		腾讯视频
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                    <li class="footer_link_list_item">
+			                    	<a>
+			                    		手机QQ空间
+			                    	</a>
+			                    </li>
+			                    
+			                </ul>
+			            		
+			            </div>
+			        </div>
+			        <div class="footer_copyright">
+					
+						<p>
+							<a>关于腾讯</a>
+							<a>About Tencent</a>
+							<a>服务条款</a>
+							<a>用户服务协议</a>
+							<a>广告服务</a>
+							<a>腾讯招聘</a>
+							<a>客服中心</a>
+							<a>网站导航</a>
+						</p>
+				
+				        <p>Copyright © 1998 - 2016 Tencent. 
+				        	<a>All Rights Reserved.</a>
+				        </p>
+						<p>腾讯公司 
+							<a>版权所有</a> 
+							<a>腾讯网络文化经营许可证</a>
+						</p>
+			        </div>
+			    </div>
+			</div>
+			
+			
+		</div>
+		
+		<!--<a class="btn_bottom_top sprite"></a>
+		<a class="btn_bottom_feedback sprite"></a>
+		<a class="btn_bottom_player"></a>-->
+	</body>
+</html>

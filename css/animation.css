@@ -1,0 +1,8 @@
+@keyframes upup{
+	from{
+		transform: translate(0,0)
+	}
+	to{
+		transform: translate(0,-400px)
+	}
+}

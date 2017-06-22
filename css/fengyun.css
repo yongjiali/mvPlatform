@@ -1,0 +1,308 @@
+*,
+body {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: "Microsoft YaHei";
+}
+
+#demo1,#demo2,#demo3,#demo4 {
+	width: 1210px;
+	margin: 0px auto;
+	margin-top: 20px;
+	height: 420px;
+	overflow: hidden;
+	position: relative;
+	z-index: 998;
+}
+
+.demoNav {
+	height: 36px;
+	width: 100%;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #0a8ee5;
+	position: relative;
+}
+
+.demoImg {
+	width: 29px;
+	height: 29px;
+	float: left;
+	margin-left: 0px;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+.demoTitle {
+	float: left;
+	margin-right: 20px;
+}
+
+.demoTitle a {
+	font-size: 22px;
+	color: #51575d;
+}
+
+.demoTitle a:hover {
+	color: #4570ea;
+}
+
+.demoNav ul {
+	float: left;
+	list-style: none;
+}
+
+.demoNav li {
+	display: block;
+	float: left;
+	list-style: none;
+	cursor: pointer;
+}
+
+.demoNav li span {
+	display: block;
+	font-size: 16px;
+	padding: 6.5px 5px;
+	margin: 0 3px;
+}
+
+.demoBut1 {
+	color: #4570ea;
+	border-bottom: 3px solid #4570ea;
+}
+
+.demoBody1 {
+	visibility: visible;
+	position: absolute;
+	top: 73px;
+}
+
+.demoBody2,
+.demoBody3,
+.demoBody4,
+.demoBody5 {
+	visibility: hidden;
+	position: absolute;
+	top: 73px;
+}
+
+.bigVideo {
+	width: 380px;
+	height: 344px;
+	float: left;
+	position: relative;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+.bigVideo:hover{
+	/*border: 2px solid blue;*/
+}
+
+.onBigVideo {
+	width: 380px;
+	height: 344px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.bigVideo img {
+	width: 380px;
+	height: 290px;
+	position: absolute;
+}
+
+.onBigVideo img {
+	width: 45px;
+	height: 45px;
+	margin: 122px 167px;
+	visibility: hidden;
+}
+
+.demoInfor {
+	background: #e8e8e8;
+	position: absolute;
+	width: 380px;
+	height: 54px;
+	bottom: 0px;
+	z-index: 11;
+	left: 0px;
+}
+
+.demoInfor .title {
+	display: block;
+	width: 264px;
+	position: absolute;
+	height: 27px;
+	margin-left: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	line-height: 40px;
+	font-size: 14px;
+	color: #282828;
+}
+
+.demoInfor .peopleNum {
+	width: 64px;
+	height: 27px;
+	color: #556369;
+	margin-left: 10px;
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+
+.demoInfor .peopleNum img {
+	width: 23px;
+	height: 23px;
+}
+
+.demoInfor .peopleNum span {
+	position: absolute;
+	left: 23px;
+	font-size: 12px;
+	display: block;
+	padding-top: 4px;
+}
+
+.demoInfor .SecTitle {
+	display: block;
+	width: 377px;
+	margin-left: 5px;
+	height: 27px;
+	line-height: 27px;
+	text-align: left;
+	color: #656565;
+	z-index: 2;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.videoList {
+	width: 828px;
+	height: 363px;
+	margin: -16px 0px 0px 0px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.videoList li {
+	width: 196px;
+	height: 168px;
+	font-size: 12px;
+	line-height: 29px;
+	float: left;
+	margin: 13px 0px 0px 10px;
+	position: relative;
+	list-style: none;
+}
+
+.videoList li img {
+	width: 190px;
+	height: 110px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.smallVidio {
+	margin: 2px 0px 0px 2px;
+	display: block;
+	width: 190px;
+	height: 164px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.onSmallVideo {
+	width: 190px;
+	height: 164px;
+	cursor: pointer;
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+}
+
+.videoList .onSmallVideo img {
+	width: 45px;
+	height: 45px;
+	margin: 32px 72px;
+	visibility: hidden;
+}
+
+.SdemoInfor {
+	width: 190px;
+	height: 54px;
+	margin-top: 110px;
+	position: absolute;
+	font-size: 14px;
+	z-index: 1;
+	background: #e8e8e8;
+}
+
+.SdemoInfor .title {
+	width: 120px;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	height: 27px;
+	line-height: 34px;
+	margin-left: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 14px;
+	color: #282828;
+}
+
+.SdemoInfor .peopleNum {
+	position: absolute;
+	right: 0px;
+	width: 64px;
+	height: 29px;
+	color: #556369;
+	margin-left: 10px;
+	font-size: 12px;
+	line-height: 34px;
+}
+
+.SdemoInfor .peopleNum img {
+	width: 23px;
+	height: 23px;
+	position: absolute;
+	top: 5px;
+}
+
+.SdemoInfor .peopleNum span {
+	position: absolute;
+	left: 23px;
+	font-size: 12px;
+	display: block;
+}
+
+.SdemoInfor .SecTitle {
+	width: 180px;
+	height: 27px;
+	line-height: 20px;
+	text-align: left;
+	color: #656565;
+	z-index: 2;
+	position: absolute;
+	font-size: 12px;
+	bottom: 0px;
+	margin-left: 5px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

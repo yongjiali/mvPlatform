@@ -1,0 +1,93 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #151515;
+}
+li{
+	list-style: none;
+	float: left;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+#wrap{
+	width: 1200px;
+	height: 565px;
+	margin: 50px auto;
+}
+#play{
+	float: left;
+	width: 1000px;
+	height: 100%;
+	/*border: 1px solid blue;*/
+	position: relative;
+}
+#playbill{
+	float: left;
+	width: 200px;
+	height: 100%;
+	/*border: 1px solid blue;*/
+	background-color: black;
+	overflow: hidden;
+	
+}
+
+#video{
+    width: 100%;
+    height: 100%;
+}
+.video_a {
+    cursor: pointer;
+    width: 160px;
+    height: 90px;
+    padding-bottom: 28px;
+    margin: 20px auto;
+    
+}
+.video_a .videoPic{
+    width: 160px;
+    height: 90px;
+    position: relative;
+}
+.video_a .videoPic img {
+    width: 100%;
+    height: 100%;
+}
+.video_a .videoPic_hover{
+    background: url(../img/musicPlatform/video_hover.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.video_a .videoPic:hover .videoPic_hover {
+    display: block;
+}
+/*字*/
+.video_a p {
+    font-size: 13px;
+    line-height: 13px;
+    font-family: "微软雅黑";
+}
+.title {
+    color: #fff;
+    padding: 5px 0;
+    width: 160px;
+}
+.video_a .count {
+    color: #666;
+    padding-left: 18px;
+    background: url(../img/musicPlatform/play_count.png) no-repeat;
+}
+.active1{
+	border: 2px solid #27d5bf;
+}
+.active2{
+	color: #27d5bf;
+}
+
